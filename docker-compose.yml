@@ -2,7 +2,7 @@ version: '3'
 
 services:
   cli:
-    image: mcr.microsoft.com/azure-cli:latest
+    image: mud5150/addtoaz:latest
     command: sleep 86400
     environment:
       http_proxy: ${http_proxy}

@@ -5,3 +5,7 @@ variable "resource_group" {
 variable "project" {
   default = "test"
 }
+
+variable "username" {
+  default = "win10test"
+}

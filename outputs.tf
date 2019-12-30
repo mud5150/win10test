@@ -1,5 +1,5 @@
 output "username" {
-  value = "${var.project}"
+  value = "${var.username}"
 }
 
 output "password" {

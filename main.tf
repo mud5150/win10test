@@ -68,7 +68,7 @@ resource "azurerm_virtual_machine" "vm" {
   }
   os_profile {
     computer_name  = "${var.project}-client"
-    admin_username = "win10test"
+    admin_username = "${var.username}"
     admin_password = "${random_string.password.result}"
   }
   os_profile_windows_config {}

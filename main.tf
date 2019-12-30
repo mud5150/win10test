@@ -19,7 +19,7 @@ resource "azurerm_subnet" "data" {
 }
 
 resource "azurerm_subnet" "bastion" {
-  name                 = "bastion"
+  name                 = "AzureBastionSubnet"
   resource_group_name  = "${data.azurerm_resource_group.rg.name}"
   virtual_network_name = "${azurerm_virtual_network.vnet.name}"
   address_prefix       = "10.0.1.0/24"
@@ -71,6 +71,7 @@ resource "azurerm_virtual_machine" "vm" {
     admin_username = "${var.project}"
     admin_password = "${random_string.password.result}"
   }
+  os_profile_windows_config {}
 }
 
 resource "azurerm_public_ip" "bastion" {
